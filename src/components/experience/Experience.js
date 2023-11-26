@@ -1,6 +1,6 @@
-import "./experiences.scss";
+import "./experience.scss";
 
-export default function Experiences() {
+export default function Experience() {
   return (
     <div className="experiences" id="experiences">
         

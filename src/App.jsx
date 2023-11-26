@@ -4,7 +4,7 @@ import "./app.scss"
 import { useState } from "react";
 import Skill from "./components/skill/Skill";
 import Home from "./components/home/Home";
-import Experiences from "./components/experience/Experiences";
+import Experience from "./components/experience/Experience";
 import Educations from "./components/education/Educations";
 import Menu from "./components/menu/Menu";
 
@@ -13,13 +13,14 @@ function App() {
   return (
     <div className="app">
    <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-   <Menu/>
+   <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
    <div className="section">
  
     <Home/>
     <Skill/>
-    <Experiences/>
     <Educations/>
+    <Experience/>
+    
     <Contact/>
    </div>
     </div>

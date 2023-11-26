@@ -1,6 +1,6 @@
 import "./educations.scss"
 
-export default function Educations() {
+export default function Education() {
   return (
     <div className="educations" id="educations">
       
