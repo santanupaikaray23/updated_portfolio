@@ -6,11 +6,9 @@ export default function Home() {
 
   const textRef = useRef();
   useEffect(()=>{
-    init(textRef.current, {
-       showCursor: false,
-       backDelay: 1500,backSpeed:60,
-        strings: ['Developer', 'Youtuber', 'Designer']
-       })
+   
+    init(textRef.current, { showCursor: false,
+       strings: ["Developer", "Youtuber", "Designer"] })
 
   },[])
   return (
@@ -24,7 +22,7 @@ export default function Home() {
         <div className="wrapper">
           <h2>Hi There, I'm</h2>
           <h1>Santanu Paikaray</h1>
-          <h3>Developer <span ref={textRef}></span></h3>
+          <h3>Also, I am a <span ref={textRef}></span></h3>
         </div>
         <a href="#skills">
           <img src="assets/down.png" alt=""/>
