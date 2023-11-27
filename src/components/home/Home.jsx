@@ -6,11 +6,12 @@ export default function Home() {
 
   const textRef = useRef();
   useEffect(()=>{
+     
    
-    init(textRef.current, { showCursor: false,
-       strings: ["Developer", "Youtuber", "Designer"] })
+     init(textRef.current, { showCursor: false,
+      strings: ["Developer", "Youtuber", "Designer"] })
 
-  },[])
+  },[]);
   return (
     <div className="home" id="home">
       <div className="left">
