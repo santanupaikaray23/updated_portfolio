@@ -10,12 +10,24 @@
         list-style: none;
         display: flex;
 
+        @include mobile{
+            font-size: 20px;
+        }
+
     }
     ul{
         margin:10px;
         padding: 0;
         list-style: none;
         display: flex;
+
+        
+        @include mobile{
+            margin: 10px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
     li{
         font-size: 12px;
         margin-right: 50px;
@@ -37,6 +49,11 @@
         justify-content: center;
         flex-wrap: wrap;
 
+        
+        @include mobile{
+            width: 100%;
+        }
+
         .item{
             width: 170px;
             height: 110px;
@@ -48,6 +65,12 @@
             justify-content: center;
             color: white;
             position: relative;
+
+            
+        @include mobile{
+            width: 130px;
+            height: 100px;
+        }
 
             h3{
                 position: absolute;
