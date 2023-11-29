@@ -57,7 +57,7 @@ export default function Experience() {
 ]
   return (
     <div className="experiences" id="experiences">
-         <h1>Work Experience</h1>
+         <h1>Work Experiences</h1>
             <div className="container">
                 {data.map((d)=>(
 

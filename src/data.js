@@ -90,6 +90,18 @@ export const otherSkill = [
         title:"GitHub",
         img:"https://i.ibb.co/rt7qDJX/github.png",
     },
+    {
+        id: 4,
+        title:"Sourcetree",
+        img:"https://i.ibb.co/J74sQQR/Sourcetree.png",
+
+    },
+    {
+        id: 5,
+        title:"Agile Scrum Methodology",
+        img:"https://i.ibb.co/5WdxcDW/agile-scrum-process.jpg",
+
+    }
 
 
 ];
