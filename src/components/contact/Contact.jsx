@@ -21,23 +21,38 @@ export default function Contact(){
             [name]: value,
           
         })
+        
 
     };
-
-    const handleSubmit = (e) =>{
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(user);
-        fetch('http://localhost:9800/addUsers',{
-            method:'POST',
-            headers:{
-                'Accept':'Application/json',
-                'Content-Type':'appliaction/json'
-            },
-            body:JSON.stringify({user})
+    
+        try {
+            const response = await fetch('http://localhost:9800/addUsers', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(user),
+            });
+    
+            // Check if the request was successful
+            if (response.ok) {
+                // Handle success, e.g., show a success message or redirect
+                console.log('User data submitted successfully');
+                alert("Thanks, I'll replay ASAP :)")
+            } else {
+                // Handle errors, e.g., show an error message
+                console.error('Error submitting user data');
+            }
+        } catch (error) {
+            console.error('An error occurred during the fetch:', error);
+        }
+    };
+   
 
-        })
-
-    }
+    
 
     return(
         <div className="contact" id="contact">
