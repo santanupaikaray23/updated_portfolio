@@ -9,7 +9,7 @@ export default function Home() {
      
    
       init(textRef.current, { showCursor: false,
-       strings: ["FullstackDeveloper", "Youtuber", "Designer"] })
+       strings: ["MERNstackDeveloper", "Youtuber", "Designer"] })
 
   },[]);
   return (
@@ -23,10 +23,9 @@ export default function Home() {
         <div className="wrapper">
           <h2>Hi There, I'm</h2>
           <h1>Santanu Paikaray</h1>
-          <h3><span ref={textRef}></span></h3>
+          <h3>A <span ref={textRef}></span></h3>
         </div>
-        <a href="#skills">
-          <img src="assets/down.png" alt=""/>
+        <a href="#skills"><img src="assets/down.png" alt=""/>
         </a>
       </div>
 
