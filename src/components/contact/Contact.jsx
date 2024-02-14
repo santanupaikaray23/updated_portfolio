@@ -1,6 +1,8 @@
 // import { useState } from "react";
 import {useState } from "react";
 import "./contact.scss";
+import swal from 'sweetalert';
+import Spinner from "../spinner/spinner";
 
 
 export default function Contact(){
@@ -10,6 +12,8 @@ export default function Contact(){
         message:"",
 
     });
+
+    const [loading, setLoading] = useState(false);
 
     const handleInput= (e) => {
         console.log(e);
@@ -29,27 +33,44 @@ export default function Contact(){
         console.log(user);
     
         try {
-            const response = await fetch('http://localhost:9800/addUsers', {
+            setLoading(true);
+            const response = await fetch('https://nodeapi-ix88.onrender.com/addUsers', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(user),
+                
             });
     
             // Check if the request was successful
             if (response.ok) {
+               
                 // Handle success, e.g., show a success message or redirect
                 console.log('User data submitted successfully');
-                alert("Thanks, I'll replay ASAP :)")
+                
+                
+    
+                swal("Submited Successfully!");
+                setUser({
+                    email: "",
+                    phone: "",
+                    message: "",
+                });
+            
+                // alert("Thanks, I'll replay ASAP :)")
             } else {
                 // Handle errors, e.g., show an error message
-                console.error('Error submitting user data');
+                 console.error('Error submitting user data');
+                
             }
         } catch (error) {
             console.error('An error occurred during the fetch:', error);
+        }finally{
+            setLoading(false);
         }
     };
+    
    
 
     
@@ -77,9 +98,14 @@ export default function Contact(){
                 <input type="message" name="message" placeholder="message" id="message" required autoComplete="off"
                 value={user.message} onChange={handleInput}/>
                  </div>
-                   <button type="submit" className="btn btn-submit">Submit</button>
-              </form>
+                   <button type="submit" className="btn btn-submit" disabled={loading} >{loading ? 'Submitting Plz Wait...':'Submit'}</button>
 
+              </form>
+              {loading && (
+          <div className="fullscreen-loader">
+            <Spinner />
+          </div>
+        )}
             </div>
 
         </div>
