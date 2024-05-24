@@ -34,7 +34,7 @@ export default function Contact(){
     
         try {
             setLoading(true);
-            const response = await fetch('https://nodeapi-ix88.onrender.com/addUsers', {
+            const response = await fetch('https://node-api-freelance.onrender.com/addUsers', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

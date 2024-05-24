@@ -37,6 +37,13 @@ export default function Experience() {
   name:"Tata Consultancy Services",
   img:"https://i.ibb.co/8rjGZgW/download-1.png",
   featured: true,
+},
+{
+  id: "3",
+  date:"(13th May 2024 - Currently Working)",
+  name:"Sheerdrive Private Limited",
+  img:"https://i.ibb.co/Jy8jykb/sheerdrive.png",
+  featured: true,
 }
 
 
