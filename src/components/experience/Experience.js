@@ -44,9 +44,7 @@ export default function Experience() {
   name:"Sheerdrive Private Limited",
   img:"https://i.ibb.co/Jy8jykb/sheerdrive.png",
   featured: true,
-}
-
-
+},
 ]
   return (
     <div className="experiences" id="experiences">

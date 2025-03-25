@@ -7,17 +7,13 @@
     position: relative;
 
     .arrow{
-        height: 50px;
+        height: 60px;
         position: absolute;
         cursor: pointer;
 
-       
-
-       
-
         &.left{
             left: 100px;
-            transform: rotateY(180deg);
+            transform: rotateY(360deg);
         }
         &.right{
             right: 100px;
@@ -116,6 +112,7 @@
                     width: 700px;
                     transform: rotate(-10deg);
                     
+                    
                 }
                
             }
@@ -131,6 +128,7 @@
     }
     .left{
         color: black;
+        
     }
 
 }
