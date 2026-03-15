@@ -11,7 +11,7 @@ export default function Education() {
             position:"B.tech",
             title:"Einstein Academy of Technology & Management, Bhubaneswar",
             desc:"(2015-2018)",
-            marksecured:"76.22%",
+            marksecured:"70.6%",
             img:"https://i.ibb.co/7yqmqYq/Graduation-mortar-on-top-of-books.jpg",
         },
         {
